@@ -36,10 +36,3 @@
 - Devolver sucursales por cliente dado su id GET: http://localhost:8080/prueba/api/branchs/branchsByClient/id
 
 
-
-
-
-
-
-
-
