@@ -39,7 +39,7 @@ public class BranchController {
     }
     
     //End point que guarda una sucursal dado el id del cliente 
-    @PostMapping("/saveAddress/{id}")
+    @PostMapping("/saveBranch/{id}")
     public ResponseEntity<Branch> saveAddress(@RequestBody Branch branch, @PathVariable("id") long id){
         return branchService.registerAddressByClient(id,branch)
                 .map(save -> new ResponseEntity<>(branch,HttpStatus.OK))
@@ -47,7 +47,7 @@ public class BranchController {
     }
 
     //End point que returna todas las sucursales que tiene un cliente dado su id
-    @GetMapping("/getByClient/{id}")
+    @GetMapping("/branchsByClient/{id}")
     public ResponseEntity<Branch> getByClient(@PathVariable("id") long id){
         return branchService.getByClientId(id)
                 .map(branch -> new ResponseEntity<>(branch,HttpStatus.OK))
